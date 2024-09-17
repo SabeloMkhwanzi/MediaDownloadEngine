@@ -1,0 +1,24 @@
+@MediaDownloaderAPI_HostAddress = http://localhost:5177
+
+GET {{MediaDownloaderAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+POST http://localhost:5177/api/media/download
+Content-Type: application/json
+
+{
+  "url": "https://www.youtube.com/watch?v=NrO0CJCbYLA", 
+  "format": "mp4",
+  "resolution": "best"
+}
+
+
+###
+POST http://localhost:5177/api/media/convert
+Content-Type: application/json
+
+{
+  "inputFilePath": "C:\\Users\\USER\\Desktop\\C# Ptojects\\MediaDownloaderAPI\\Downloads\\Rust in 100 Seconds.webm",
+  "outputFormat": "mp3"
+}
